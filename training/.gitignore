@@ -1,0 +1,5 @@
+raw/
+*.pyc
+*.log
+models/
+.ipynb_checkpoints/
