@@ -1,0 +1,8 @@
+scrapy
+scrapy-proxies==0.3
+scrapy-fake-useragent
+scrapy-redis
+selenium
+txsocksx
+pymongo
+requests[security]
