@@ -1,0 +1,51 @@
+{
+  "_id": {
+    "$oid": "59e70081f2f22b68a3dd4328"
+  },
+  "body": "I love this car yet unfortunately I'm finding myself only driving my partner's Prius and 2 cars in SOMA are starting to seem silly. Esp as this car I've used only about 1-2 times per month for the past 6 months. This car has been parked in an indoor garage the entire time of ownership.  My mom was the original owner, and then she gave it to me a few years ago. Car works perfectly, rides smooth, and has only a few minor dings on the outside. I'll post some more images this weekend.",
+  "category": "cto",
+  "notice": [
+    "do NOT contact me with unsolicited services or offers"
+  ],
+  "title": "Acura TL, 2005",
+  "url": "https://sfbay.craigslist.org/sfc/cto/d/acura-tl-2005/6333121266.html",
+  "price": "6875",
+  "posted_at": "2017-10-04T16:51:13-0700",
+  "updated_at": "2017-10-17T21:10:47-0700",
+  "longitude": "-122.397100",
+  "post_id": "6333121266",
+  "attr_text": [
+    "2005 acura tl 3.2",
+    "VIN:",
+    "19UUA66285A025659",
+    "condition:",
+    "good",
+    "cylinders:",
+    "4 cylinders",
+    "drive:",
+    "fwd",
+    "fuel:",
+    "gas",
+    "odometer:",
+    "75000",
+    "paint color:",
+    "silver",
+    "size:",
+    "full-size",
+    "title status:",
+    "clean",
+    "transmission:",
+    "automatic",
+    "type:",
+    "sedan"
+  ],
+  "title_text": "Acura TL, 2005 $6875 (SOMA)",
+  "collection": "sfbay_redis",
+  "address": "",
+  "images": [],
+  "latitude": "37.762100",
+  "dealer": false,
+  "thumbs": []
+}
+
+

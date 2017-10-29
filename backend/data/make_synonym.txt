@@ -1,0 +1,32 @@
+volkswagen,vw,volkswagon,jetta,gti,beetle,passat,traverse,touareg
+chevrolet,chevy,cheverolet,camaro,chev,corvette,chevry,colorado,suburban,chevorlet,silverado,tahoe,cheve express
+tesla,model x,model s
+isuzu,izuzu,isusu
+mercedes-benz,mercedes benz,mercedes,mercedez benz,mercedez-benz,sprinter,benz,c230,mercedez,s500,mbz,gl 350,sl 320,mersedes,e320,mb 350c
+acura,acure,acurs,accura,gsr
+land-rover,land rover,range rover
+mclaren,mcclaren
+freightliner,freight liner,frieghtliner
+nissan,nisan,nissn,nisaan,nissian,titan,nizzan,altima,nissano
+austin-healey,austin healey
+ford,fusion,f350,f250,f150,mustang,explorer,thurderbird
+toyota,camry,toyo,matrix,prius,toyoto,4runner,tacoma,toyotacorola,corolla,sienna
+honda,hinda,afccord,handa,crv,ex- l,civic,accord
+lincoln,lincon
+bmw,e46,b<w,bmw3ma28i,325i,328i,330i,740i,528i,x1
+mitsubishi,mits,eclipse
+pontiac,poniac,firebird
+subaru,suburu,wrx,surbaru,brz
+infiniti,infinity,inifinti,infinti,g37
+aston-martin,aston martin
+chrysler,crysler,chryler,300c,chysler,chrystler,town n country
+mazda,mazda3,mazdaspeed,mazda5
+hyundai,hyndai,steller,accent,i30
+lexus,gx470,rx300
+dodge,caravan,d250,strattus
+gmc,yukon,gmc-arcadia
+vauxhall,astra
+volvo,vovloxc90
+cadillac,fleetwood,cadilac
+alfa romeo
+porsche,porche,boxster
