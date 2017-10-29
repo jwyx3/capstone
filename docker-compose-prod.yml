@@ -1,0 +1,83 @@
+version: "3.2"
+services:
+  crawler:
+    build: ./crawler
+    image: jwyx3/crawler_sfbay:v1
+    networks:
+      overlay:
+    depends_on:
+      - mongodb
+      - redis
+    volumes:
+      - "/opt/secrets:/run/secrets"
+  feeder:
+    build: ./feeder
+    image: jwyx3/feeder_sfbay:v1
+    networks:
+      overlay:
+    depends_on:
+      - redis
+  backend:
+    build: ./backend
+    image: jwyx3/backend_sfbay:v1
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - "/opt/secrets:/run/secrets"
+      - "/www/data:/www/data"
+    networks:
+      overlay:
+    depends_on:
+      - redis
+      - mongodb
+      - mysql
+  frontend:
+    build: ./frontend
+    image: jwyx3/frontend_sfbay:v1
+    environment:
+      - REACT_APP_API_URL=http://localhost:8080
+    volumes:
+      - "/www/data:/www/data"
+      - "/var/log:/var/log"
+    ports:
+      - "127.0.0.1:80:80"
+    networks:
+      overlay:
+  mongodb:
+    image: mongo:3.4.4
+    volumes:
+      - "mongo_data:/data/db"
+    ports:
+      - "127.0.0.1:27017:27017"
+    networks:
+      overlay:
+  redis:
+    image: redis:4.0.2
+    command: redis-server --appendonly yes # enable persistence
+    volumes:
+      - "redis_data:/data"
+    ports:
+      - "127.0.0.1:6379:6379"
+    networks:
+      overlay:
+  mysql:
+    image: mysql:5.7.20
+    ports:
+      - "127.0.0.1:3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/mysql-root
+      - MYSQL_DATABASE=backend
+      - MYSQL_USER_FILE=/run/secrets/mysql-user
+      - MYSQL_PASSWORD_FILE=/run/secrets/mysql-password
+    volumes:
+      - "/opt/secrets:/run/secrets"
+    networks:
+      overlay:
+
+volumes:
+  mongo_data:
+  redis_data:
+  mysql_data:
+
+networks:
+  overlay:
