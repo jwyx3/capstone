@@ -1,4 +1,4 @@
-version: "3.2"
+version: "2"
 services:
   crawler:
     build: ./crawler
@@ -49,6 +49,7 @@ services:
       - "mongo_data:/data/db"
     ports:
       - "127.0.0.1:27017:27017"
+    mem_limit: 300m
     networks:
       overlay:
   redis:
