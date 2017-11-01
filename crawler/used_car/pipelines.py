@@ -6,16 +6,16 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 import pymongo
-from scrapy.conf import settings
+import settings
 import requests
 import json
 import logging
 
 
-app_scheme = settings['APP_SCHEME']
-app_host = settings['APP_HOST']
-app_port = settings['APP_PORT']
-app_worker_token = settings['APP_WORKER_TOKEN']
+app_scheme = settings.APP_SCHEME
+app_host = settings.APP_HOST
+app_port = settings.APP_PORT
+app_worker_token = settings.APP_WORKER_TOKEN
 
 
 def get_api_url(path):
@@ -25,8 +25,8 @@ def get_api_url(path):
 class UsedCarPipeline(object):
     def __init__(self):
         connection = pymongo.MongoClient(
-            settings['MONGODB_SERVER'], settings['MONGODB_PORT'])
-        db = connection[settings['MONGODB_DB']]
+            settings.MONGODB_SERVER, settings.MONGODB_PORT)
+        db = connection[settings.MONGODB_DB]
         self.collections = {
             "sfbay": db['sfbay'],
             "sfbay_redis": db['sfbay_redis'],
@@ -60,10 +60,10 @@ class UsedCarPipeline(object):
         }
 
     def post_message(self, item):
-        if not settings['ENABLE_SLACK']:
+        if not settings.ENABLE_SLACK:
             return
         resp = self.session.post(
-            settings['SLACK_WEBHOOK'],
+            settings.SLACK_WEBHOOK,
             headers={"Content-type": "application/json"},
             data=json.dumps(self.get_message(item)),
             verify=False

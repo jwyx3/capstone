@@ -6,6 +6,8 @@ os.environ['http_proxy'] = 'http://83.149.70.159:13012'
 with open('/run/secrets/proxy') as f:
     os.environ['http_proxy'] = f.read().strip()
 
+# don't use proxy for internal traffic
+os.environ['no_proxy'] = 'localhost,127.0.0.1,backend'
 
 # Scrapy settings for used_car project
 #
